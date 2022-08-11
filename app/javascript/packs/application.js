@@ -8,6 +8,7 @@ import Turbolinks from 'turbolinks';
 import * as ActiveStorage from '@rails/activestorage';
 import 'channels';
 import '@doabit/semantic-ui-sass';
+import '../src/functions';
 
 Rails.start();
 Turbolinks.start();
@@ -20,4 +21,6 @@ $(document).on('turbolinks:load', () => {
   $('.message .close').on('click', function () {
     $(this).closest('.message').transition('fade');
   });
+  submit_message();
+  scroll_bottom();
 });
